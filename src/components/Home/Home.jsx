@@ -1,13 +1,16 @@
 import { useLoaderData } from "react-router";
+import Card from "./Card/Card";
 
 
 const Home = () => {
-    const post =useLoaderData();
-    console.log(post);
+    const posts =useLoaderData();
+    console.log(posts);
     
     return (
-        <div>
-            
+        <div className="grid grid-cols-3 gap-y-4 mt-10">
+            {
+                posts.map(post=><Card post={post}></Card>)
+            }
         </div>
     );
 };
