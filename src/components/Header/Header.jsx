@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 
 const Header = () => {
     return (
@@ -8,9 +9,9 @@ const Header = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
+                        <li><NavLink to={'/'}>Home</NavLink></li>
                         <li>
-                           <a href="">About</a>
+                           <NavLink to={'/about'}>About</NavLink>
                         </li>
                     </ul>
                 </div>

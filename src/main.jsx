@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import Home from './components/Home/Home';
 import Post from './components/Home/Card/Post/Post.jsx';
+import About from './components/About/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path:'/post/:id',
         loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`),
         element:<Post></Post>
+      },
+      {
+        path:'/about',
+        element:<About></About>
       }
     ]
   },
