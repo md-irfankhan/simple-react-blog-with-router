@@ -7,7 +7,7 @@ const Home = () => {
     console.log(posts);
     
     return (
-        <div className="grid grid-cols-3 gap-y-4 mt-10">
+        <div className="grid justify-center lg:grid-cols-3 gap-y-4 mt-10">
             {
                 posts.map(post=><Card post={post}></Card>)
             }
